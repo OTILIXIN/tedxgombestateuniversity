@@ -1,27 +1,35 @@
-import Link from "next/link";
+import React from "react";
 
-type ButtonProps = {
-  href: string;
+interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
-};
+  onClick?: () => void;
+  className?: string;
+}
 
 export default function Button({
-  href,
   children,
   variant = "primary",
+  onClick,
+  className = "",
 }: ButtonProps) {
-  const styles =
-    variant === "primary"
-      ? "bg-red-600 hover:bg-red-700 text-white"
-      : "border border-white hover:bg-white hover:text-black text-white";
+  const baseStyle =
+    "px-8 py-4 rounded-xl font-semibold transition duration-300";
+
+  const variants = {
+    primary:
+      "bg-red-600 hover:bg-red-700 text-white",
+    secondary:
+      "border border-white text-white hover:bg-white hover:text-black",
+  };
 
   return (
-    <Link
-      href={href}
-      className={`inline-flex items-center justify-center rounded-xl px-8 py-4 font-semibold transition ${styles}`}
+    <button
+      type="button"
+      onClick={onClick}
+      className={`${baseStyle} ${variants[variant]} ${className}`}
     >
       {children}
-    </Link>
+    </button>
   );
 }

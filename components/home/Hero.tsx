@@ -1,36 +1,53 @@
 "use client";
 
 import FadeIn from "../animations/FadeIn";
+import Button from "../ui/Button";
 
 export default function Hero() {
   return (
     <FadeIn>
-      <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center bg-black text-white">
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black px-6 text-center text-white">
+  {/* Background Glow */}
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute left-1/2 top-1/2 h-[900px] w-28 -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-full bg-red-600/30 blur-[220px]" />
 
-        <p className="text-red-500 font-semibold uppercase tracking-[0.3em] mb-4">
-          TEDxGombeStateUniversity 2027
-        </p>
+    <div className="absolute left-1/2 top-1/2 h-[900px] w-28 -translate-x-1/2 -translate-y-1/2 -rotate-45 rounded-full bg-red-600/30 blur-[220px]" />
+  </div>
 
-        <h1 className="text-6xl md:text-8xl font-extrabold leading-tight">
-          Unboxed <span className="text-red-600">Minds</span>
-        </h1>
+        {/* Background Glow */}
+        <div className="absolute inset-0">
+          <div className="absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[180px]" />
+        </div>
 
-        <p className="mt-8 text-xl text-gray-300 max-w-3xl mx-auto leading-8">
-          Ideas can transform communities.
-          Join Northern Nigeria&lsquo;s brightest thinkers, innovators,
-          entrepreneurs and changemakers for a day of powerful TEDx talks,
-          meaningful conversations and unforgettable experiences.
-        </p>
+        {/* Content */}
+        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center pt-28">
 
-        <div className="mt-10 flex flex-wrap justify-center gap-5">
+          <p className="mb-6 uppercase tracking-[0.35em] text-red-600 font-semibold text-sm">
+            TEDxGombe State University
+          </p>
 
-          <button className="rounded-xl bg-red-600 px-8 py-4 font-semibold transition hover:bg-red-700">
-            Register Now
-          </button>
+          <h1 className="text-5xl font-extrabold leading-[0.9] md:text-6xl lg:text-7xl">
+            Ideas Worth
+            <br />
+            <span className="text-red-600">Spreading</span>
+          </h1>
 
-          <button className="rounded-xl border border-white px-8 py-4 transition hover:bg-white hover:text-black">
-            Watch 2026 Highlights
-          </button>
+          <p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-gray-300 md:text-xl">
+            Welcome to the official website of TEDxGombeStateUniversity,
+            an independently organized TEDx event licensed by TED.
+            Discover our journey, speakers, partners, stories and future editions
+            as we continue building a community inspired by ideas worth spreading.
+          </p>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-5">
+            <Button>
+              Stay Updated
+            </Button>
+
+            <Button variant="secondary">
+              Explore TEDxGSU
+            </Button>
+          </div>
 
         </div>
 
