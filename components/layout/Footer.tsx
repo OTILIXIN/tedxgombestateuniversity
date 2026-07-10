@@ -154,7 +154,7 @@ export default function Footer() {
       />
 
       <span className="font-semibold tracking-wide text-white">
-        LIXIN NETWORK LTD
+        LIXINNETWORK LTD.
       </span>
     </a>
 
