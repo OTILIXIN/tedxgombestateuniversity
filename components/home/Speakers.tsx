@@ -8,14 +8,10 @@ export default function Speakers() {
     <Section className="relative overflow-hidden bg-black text-white">
 
         <div className="absolute inset-0 pointer-events-none">
-  <div className="absolute left-1/2 top-40 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[180px]" />
+  <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/10 blur-[160px] sm:h-[550px] sm:w-[550px] lg:h-[700px] lg:w-[700px] lg:blur-[220px]" />
 </div>
 
       <Container>
-
-        <div className="relative z-10">
-  {/* Existing SectionHeader, grid and button */}
-</div>
 
         <SectionHeader
           eyebrow="2026 Edition"
@@ -23,7 +19,7 @@ export default function Speakers() {
           description="Meet the inspiring speakers who shared ideas worth spreading at the inaugural TEDxGombeStateUniversity event."
         />
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
 
           <SpeakerCard
             name="Speaker One"
@@ -63,8 +59,8 @@ export default function Speakers() {
 
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <button className="rounded-xl border border-red-600 px-8 py-3 font-semibold transition hover:bg-red-600">
+        <div className="mt-12 flex justify-center sm:mt-16">
+          <button className="w-full rounded-xl border border-red-600 px-8 py-3 font-semibold transition-all duration-300 hover:bg-red-600 sm:w-auto">
             View All 2026 Speakers
           </button>
         </div>

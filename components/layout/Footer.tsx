@@ -15,7 +15,7 @@ export default function Footer() {
 
       <Container>
 
-        <div className="grid gap-12 py-20 md:grid-cols-4">
+        <div className="grid gap-12 py-16 sm:py-20 md:grid-cols-2 lg:grid-cols-4">
 
           {/* Brand */}
           <div className="md:col-span-2">
@@ -24,8 +24,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="TEDxGombeStateUniversity"
-                width={220}
-                height={70}
+                width={260}
+                height={80}
+                className="w-48 sm:w-56 lg:w-64 h-auto"
               />
             </Link>
 
@@ -46,11 +47,46 @@ export default function Footer() {
 
             <ul className="space-y-3 text-gray-400">
 
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/speakers">Speakers</Link></li>
-              <li><Link href="/partners">Partners</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              <li>
+  <Link
+    href="/"
+    className="transition-colors duration-300 hover:text-red-500"
+  >
+    Home
+  </Link>
+</li>
+              <li>
+  <Link
+    href="/"
+    className="transition-colors duration-300 hover:text-red-500"
+  >
+    About
+  </Link>
+</li>
+              <li>
+  <Link
+    href="/"
+    className="transition-colors duration-300 hover:text-red-500"
+  >
+    Speakers
+  </Link>
+</li>
+              <li>
+  <Link
+    href="/"
+    className="transition-colors duration-300 hover:text-red-500"
+  >
+    Partners
+  </Link>
+</li>
+              <li>
+  <Link
+    href="/"
+    className="transition-colors duration-300 hover:text-red-500"
+  >
+    Contact
+  </Link>
+</li>
 
             </ul>
 
@@ -63,7 +99,7 @@ export default function Footer() {
               Contact
             </h3>
 
-            <ul className="space-y-3 text-gray-400">
+            <ul className="space-y-4 leading-7 text-gray-400">
 
               <li>tedxgombestateuniversity0@gmail.com</li>
 
@@ -83,40 +119,40 @@ export default function Footer() {
   href="https://www.instagram.com/yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="Instagram"
 >
-  <FaInstagram size={20} />
+  <FaInstagram size={18} />
 </a>
 
   <a
   href="https://www.linkedin.com/in/yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="LinkedIn"
 >
-  <FaLinkedinIn size={20} />
+  <FaLinkedinIn size={18} />
 </a>
 
   <a
   href="https://www.youtube.com/@yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="YouTube"
 >
-  <FaYoutube size={20} />
+  <FaYoutube size={18} />
 </a>
 
   <a
   href="https://www.facebook.com/yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="Facebook"
 >
-  <FaFacebookF size={20} />
+  <FaFacebookF size={18} />
 </a>
 
 </div>
@@ -128,7 +164,7 @@ export default function Footer() {
        {/* Bottom Footer */}
 <div className="border-t border-white/10 py-8">
 
-  <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
+  <div className="flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
 
     {/* Left */}
     <p className="text-sm text-gray-500 lg:w-1/3">
@@ -149,13 +185,19 @@ export default function Footer() {
       <Image
         src="/lixin-logo2.png"
         alt="LIXIN NETWORK LTD"
-        width={32}
-        height={32}
+        width={52}
+        height={52}
+        className="h-12 w-auto object-contain"
       />
 
-      <span className="font-semibold tracking-wide text-white">
-        LIXIN NETWORK LTD
+      <span className="text-base font-bold tracking-wide text-white">
+        LIXIN NETWORK LTD.
       </span>
+
+      <span className="text-xs uppercase tracking-[0.25em] text-gray-500">
+       Digital Experience Partner
+      </span>
+
     </a>
 
     {/* Right */}
