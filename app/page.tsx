@@ -9,7 +9,7 @@ import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <>
+    <main className="relative w-full overflow-x-hidden bg-black">
       <Navbar />
       <Hero />
       <CurrentEdition />
@@ -18,6 +18,6 @@ export default function Home() {
       <VCMessage />
       <Newsletter />
       <Footer />
-    </>
+    </main>
   );
 }

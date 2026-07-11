@@ -20,7 +20,7 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center pt-16 sm:pt-20 lg:pt-28">
+        <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-28 text-center">
 
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-red-600 sm:text-sm">
             TEDxGombe State University

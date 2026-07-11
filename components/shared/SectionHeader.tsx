@@ -22,9 +22,9 @@ export default function SectionHeader({
         </p>
       )}
 
-      <h2 className="mt-4 text-4xl md:text-5xl font-bold text-white leading-tight">
-        {title}
-      </h2>
+    <h2 className="mt-4 break-words text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+      {title}
+    </h2>
 
       {description && (
         <p className="mt-6 text-lg text-gray-300 leading-8">

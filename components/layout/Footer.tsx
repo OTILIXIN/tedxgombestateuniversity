@@ -164,46 +164,50 @@ export default function Footer() {
        {/* Bottom Footer */}
 <div className="border-t border-white/10 py-8">
 
-  <div className="flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
+  <div className="grid gap-8 text-center lg:grid-cols-3 lg:items-center lg:text-left">
 
     {/* Left */}
-    <p className="text-sm text-gray-500 lg:w-1/3">
-      This independent TEDx event is operated under license from TED.
+    <a>
+    <p className="text-sm text-gray-500">
+  This independent TEDx event is operated under license from TED.
     </p>
+</a>
 
     {/* Centre */}
     <a
-      href="https://lixinnetwork.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-4 flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 transition-all duration-300 hover:border-red-600 hover:bg-white/10"
-    >
-      <span className="text-sm text-gray-400">
-        Powered by
-      </span>
+  href="https://lixinnetwork.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/5 px-6 py-5 transition-all duration-300 hover:border-red-600 hover:bg-white/10 sm:flex-row sm:gap-3"
+>
+  <span className="text-sm text-gray-400">
+    Powered by
+  </span>
 
-      <Image
-        src="/lixin-logo2.png"
-        alt="LIXIN NETWORK LTD"
-        width={52}
-        height={52}
-        className="h-12 w-auto object-contain"
-      />
+  <Image
+    src="/lixin-logo2.png"
+    alt="LIXIN NETWORK LTD"
+    width={45}
+    height={45}
+    className="shrink-0"
+  />
 
-      <span className="text-base font-bold tracking-wide text-white">
-        LIXIN NETWORK LTD.
-      </span>
+  <span className="text-center font-semibold leading-tight text-white">
+    LIXIN NETWORK LTD.
+  </span>
 
-      <span className="text-xs uppercase tracking-[0.25em] text-gray-500">
-       Digital Experience Partner
-      </span>
-
-    </a>
-
+  <span className="text-center text-xs uppercase tracking-[0.3em] text-gray-500">
+    Digital Experience Partner
+  </span>
+</a>
     {/* Right */}
-    <p className="text-sm text-gray-500 lg:w-1/3 lg:text-right">
-      © 2026 TEDxGombeStateUniversity. All rights reserved.
+    <a>
+    <p className="text-sm text-gray-500 lg:text-right">
+      © 2026 TEDxGombeStateUniversity.
+      <br className="lg:hidden" />
+      All rights reserved.
     </p>
+    </a>
 
   </div>
 

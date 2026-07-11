@@ -16,11 +16,11 @@ export default function CurrentEdition() {
     <Section className="bg-black text-white">
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/10 blur-[180px]" />
       <Container>
-        <SectionHeader
-          eyebrow="Current Edition"
-          title="TEDxGombeStateUniversity 2027"
-          description="Our license has been approved. Stay connected as we announce the official theme, event date and registration details."
-        />
+       <SectionHeader
+  eyebrow="TEDxGombe State University"
+  title="2027 Edition"
+  description="Our license has been approved. Stay connected as we announce the official theme, event date and registration details."
+/>
 
         <div className="mb-10 flex justify-center">
           <Badge variant="success">
