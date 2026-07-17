@@ -11,7 +11,7 @@ import Container from "../ui/Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black text-white">
+    <footer className="border-t border-white/10 bg-black/75 text-white">
 
       <Container>
 
@@ -30,7 +30,7 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="mt-6 max-w-md text-gray-400 leading-7">
+            <p className="mt-6 max-w-md text-gray-300 leading-7">
               TEDxGombeStateUniversity is an independently organized TED event
               dedicated to bringing together ideas, innovation and inspiring
               conversations that shape the future.
@@ -45,7 +45,7 @@ export default function Footer() {
               Quick Links
             </h3>
 
-            <ul className="space-y-3 text-gray-400">
+            <ul className="space-y-3 text-gray-300">
 
               <li>
   <Link
@@ -99,7 +99,7 @@ export default function Footer() {
               Contact
             </h3>
 
-            <ul className="space-y-4 leading-7 text-gray-400">
+            <ul className="space-y-4 leading-7 text-gray-300">
 
               <li>tedxgombestateuniversity0@gmail.com</li>
 
@@ -119,7 +119,7 @@ export default function Footer() {
   href="https://www.instagram.com/yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="Instagram"
 >
   <FaInstagram size={18} />
@@ -129,7 +129,7 @@ export default function Footer() {
   href="https://www.linkedin.com/in/yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="LinkedIn"
 >
   <FaLinkedinIn size={18} />
@@ -139,7 +139,7 @@ export default function Footer() {
   href="https://www.youtube.com/@yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="YouTube"
 >
   <FaYoutube size={18} />
@@ -149,7 +149,7 @@ export default function Footer() {
   href="https://www.facebook.com/yourusername"
   target="_blank"
   rel="noopener noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-400 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
+  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
   aria-label="Facebook"
 >
   <FaFacebookF size={18} />
@@ -167,11 +167,9 @@ export default function Footer() {
   <div className="grid gap-8 text-center lg:grid-cols-3 lg:items-center lg:text-left">
 
     {/* Left */}
-    <a>
-    <p className="text-sm text-gray-500">
+    <p className="text-sm text-gray-300">
   This independent TEDx event is operated under license from TED.
     </p>
-</a>
 
     {/* Centre */}
     <a
@@ -180,7 +178,7 @@ export default function Footer() {
   rel="noopener noreferrer"
   className="flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/5 px-6 py-5 transition-all duration-300 hover:border-red-600 hover:bg-white/10 sm:flex-row sm:gap-3"
 >
-  <span className="text-sm text-gray-400">
+  <span className="text-sm text-gray-300">
     Powered by
   </span>
 
@@ -196,18 +194,16 @@ export default function Footer() {
     LIXIN NETWORK LTD.
   </span>
 
-  <span className="text-center text-xs uppercase tracking-[0.3em] text-gray-500">
+  <span className="text-center text-xs uppercase tracking-[0.3em] text-gray-300">
     Digital Experience Partner
   </span>
 </a>
     {/* Right */}
-    <a>
-    <p className="text-sm text-gray-500 lg:text-right">
+    <p className="text-sm text-gray-300 lg:text-right">
       © 2026 TEDxGombeStateUniversity.
       <br className="lg:hidden" />
       All rights reserved.
     </p>
-    </a>
 
   </div>
 

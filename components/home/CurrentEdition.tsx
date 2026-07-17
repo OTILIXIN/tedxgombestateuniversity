@@ -13,47 +13,45 @@ import SectionHeader from "../ui/SectionHeader";
 
 export default function CurrentEdition() {
   return (
-    <Section className="bg-black text-white">
+    <Section className="relative overflow-hidden text-white">
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/10 blur-[180px]" />
       <Container>
-       <SectionHeader
-  eyebrow="TEDxGombe State University"
-  title="2027 Edition"
-  description="Our license has been approved. Stay connected as we announce the official theme, event date and registration details."
-/>
-
-        <div className="mb-10 flex justify-center">
-          <Badge variant="success">
-            ✓ License Approved
-          </Badge>
-        </div>
-
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-
-          <InfoCard
-            icon={<Palette className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
-            title="Theme"
-            value="To Be Announced"
+        <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-[0_25px_80px_rgba(0,0,0,0.35)] sm:p-8 lg:p-10">
+          <SectionHeader
+            eyebrow="TEDxGombe State University"
+            title="2027 Edition"
+            description="Our license has been approved. Stay connected as we announce the official theme, event date and registration details."
           />
 
-          <InfoCard
-            icon={<CalendarDays className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
-            title="Date"
-            value="To Be Announced"
-          />
+          <div className="mb-10 flex justify-center">
+            <Badge variant="success">✓ License Approved</Badge>
+          </div>
 
-          <InfoCard
-            icon={<MapPin className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
-            title="Venue"
-            value="Gombe State University"
-          />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            <InfoCard
+              icon={<Palette className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
+              title="Theme"
+              value="To Be Announced"
+            />
 
-          <InfoCard
-            icon={<Ticket className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
-            title="Registration"
-            value="Opening Soon"
-          />
+            <InfoCard
+              icon={<CalendarDays className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
+              title="Date"
+              value="To Be Announced"
+            />
 
+            <InfoCard
+              icon={<MapPin className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
+              title="Venue"
+              value="Gombe State University"
+            />
+
+            <InfoCard
+              icon={<Ticket className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
+              title="Registration"
+              value="Opening Soon"
+            />
+          </div>
         </div>
       </Container>
     </Section>
@@ -72,18 +70,14 @@ function InfoCard({
   value,
 }: InfoCardProps) {
   return (
-    <Card className="h-full rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-red-600/50">
-      <div className="mb-5 flex justify-center">
-        {icon}
-      </div>
+    <Card className="h-full rounded-2xl border-white/10 bg-black/25 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-red-600/50">
+      <div className="mb-5 flex justify-center">{icon}</div>
 
-      <h3 className="text-xs uppercase tracking-[0.3em] text-gray-400 sm:text-sm">
+      <h3 className="text-xs uppercase tracking-[0.3em] text-gray-300 sm:text-sm">
         {title}
       </h3>
 
-      <p className="mt-3 text-lg font-bold sm:text-xl">
-        {value}
-      </p>
+      <p className="mt-3 text-lg font-bold sm:text-xl">{value}</p>
     </Card>
   );
 }

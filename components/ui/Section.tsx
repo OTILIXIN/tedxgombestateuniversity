@@ -1,14 +1,16 @@
 type SectionProps = {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 };
 
 export default function Section({
   children,
   className = "",
+  id,
 }: SectionProps) {
   return (
-    <section className={`relative py-20 sm:py-24 ${className}`}>
+    <section id={id} className={`relative isolate overflow-hidden py-20 sm:py-24 ${className}`}>
       {children}
     </section>
   );
