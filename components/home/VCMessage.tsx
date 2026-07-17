@@ -4,7 +4,7 @@ import Section from "../ui/Section";
 
 export default function VCMessage() {
   return (
-    <Section className="relative overflow-hidden bg-black text-white border-t border-white/10">
+    <Section className="relative overflow-hidden text-white border-t border-white/10">
 
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
@@ -39,7 +39,7 @@ export default function VCMessage() {
                 Prof. Sani Ahmed Yauta
               </h3>
 
-              <p className="mt-2 text-sm uppercase tracking-wider text-gray-400">
+              <p className="mt-2 text-sm uppercase tracking-wider text-gray-300">
                 Vice-Chancellor<br />
                 Gombe State University
               </p>

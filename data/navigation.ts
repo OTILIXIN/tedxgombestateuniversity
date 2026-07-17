@@ -1,30 +1,8 @@
 export const navigation = [
-  {
-    label: "About",
-    href: "/about",
-  },
-  {
-    label: "Current Edition",
-    href: "/current-edition",
-  },
-  {
-    label: "Speakers",
-    href: "/speakers",
-  },
-  {
-    label: "Partners",
-    href: "/partners",
-  },
-  {
-    label: "Gallery",
-    href: "/gallery",
-  },
-  {
-    label: "News",
-    href: "/news",
-  },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
+  { label: "About", href: "/about" },
+  { label: "Speakers", href: "/speakers" },
+  {  label: "Get Involved", href: "/get-involved",},
+  { label: "Team", href: "/team" },
+  { label: "Partners", href: "/partners" },
+  { label: "Contact", href: "/contact" },
 ];
