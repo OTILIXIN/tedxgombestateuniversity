@@ -1,14 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/speaker/1.jpg",
-  "/speaker/2.jpg",
-  "/speaker/3.jpg",
-  "/speaker/4.jpg",
-  "/speaker/5.jpg",
-  "/speaker/6.jpg",
+  { src: "/speaker/1.jpg", mobileFocus: "object-center" },
+  { src: "/speaker/2.jpg", mobileFocus: "object-center" },
+  { src: "/speaker/3.jpg", mobileFocus: "object-center" },
+  { src: "/speaker/4.jpg", mobileFocus: "object-center" },
+  { src: "/speaker/5.jpg", mobileFocus: "object-center" },
+  { src: "/speaker/6.jpg", mobileFocus: "object-center" },
 ];
 
 export default function SpeakerBackground() {
@@ -28,17 +29,27 @@ export default function SpeakerBackground() {
       {images.map((image, index) => (
 
         <div
-          key={image}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[2500ms] ${
+          key={image.src}
+          className={`absolute inset-0 transition-opacity duration-[2500ms] ${
             current === index ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `url(${image})`,
             transform: current === index ? "scale(1.08)" : "scale(1)",
             transition:
               "opacity 2.5s ease-in-out, transform 12s ease-out",
           }}
-        />
+        >
+          <Image
+            src={image.src}
+            alt=""
+            fill
+            priority={index === 0}
+            loading={index === 0 ? undefined : "eager"}
+            sizes="100vw"
+            quality={70}
+            className={`object-cover sm:object-center ${image.mobileFocus}`}
+          />
+        </div>
 
       ))}
 
