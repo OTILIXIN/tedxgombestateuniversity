@@ -3,7 +3,7 @@ import Section from "../ui/Section";
 
 export default function TeamHero() {
   return (
-    <Section className="relative flex min-h-[85vh] items-center overflow-hidden text-white">
+    <Section className="py-0 relative flex min-h-[85vh] items-center overflow-hidden text-white">
 
       {/* Red Glow */}
       <div className="absolute inset-0 pointer-events-none">

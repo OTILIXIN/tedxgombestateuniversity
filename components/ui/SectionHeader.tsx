@@ -2,25 +2,32 @@ type SectionHeaderProps = {
   eyebrow: string;
   title: string;
   description?: string;
+  align?: "left" | "center";
 };
 
 export default function SectionHeader({
   eyebrow,
   title,
   description,
+  align = "center",
 }: SectionHeaderProps) {
-  return (
-    <div className="mx-auto mb-16 max-w-3xl text-center">
-      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-red-600">
-        {eyebrow}
-      </p>
+  const alignment =
+    align === "center"
+      ? "mx-auto text-center"
+      : "text-left";
 
-      <h2 className="text-4xl font-bold text-white md:text-5xl">
+  return (
+    <div className={`max-w-3xl ${alignment}`}>
+      <span className="inline-block text-xs font-semibold uppercase tracking-[0.28em] text-red-500 sm:text-sm">
+        {eyebrow}
+      </span>
+
+      <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-5 text-lg leading-8 text-gray-400">
+        <p className="mt-4 text-base leading-7 text-gray-400 sm:text-lg sm:leading-8">
           {description}
         </p>
       )}

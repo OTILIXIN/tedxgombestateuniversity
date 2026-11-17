@@ -5,10 +5,7 @@ import Section from "../ui/Section";
 
 export default function AboutHero() {
   return (
-    <Section className="relative flex min-h-screen items-center justify-center text-white">
-
-      {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/75" />
+    <Section className="py-0 relative flex min-h-screen items-center justify-center overflow-hidden text-white">
 
       {/* Ambient Glow */}
       <div className="pointer-events-none absolute inset-0">
@@ -33,7 +30,7 @@ export default function AboutHero() {
           </h1>
 
           <p className="mx-auto mt-10 max-w-4xl text-lg leading-9 text-gray-300">
-            TEDxGombeStateUniversity is more than an event it&lsquo;s a growing
+            TEDxGombeStateUniversity is more than an event; it&lsquo;s a growing
             community of thinkers, innovators, leaders, and changemakers
             committed to inspiring meaningful conversations and empowering
             people through ideas worth spreading.
