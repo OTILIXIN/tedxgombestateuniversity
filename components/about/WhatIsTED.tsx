@@ -1,85 +1,105 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import Container from "../ui/Container";
-import Section from "../ui/Section";
-import FadeIn from "../animations/FadeIn";
+import { motion } from "framer-motion";
+import { Lightbulb, Globe2, MessageSquareText, ArrowUpRight } from "lucide-react";
+
+import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+import SectionHeader from "@/components/ui/SectionHeader";
+
+const features = [
+  {
+    icon: Lightbulb,
+    title: "Ideas Worth Spreading",
+    description:
+      "TED brings together remarkable ideas from people across different fields, encouraging us to think differently and see the world from new perspectives.",
+  },
+  {
+    icon: Globe2,
+    title: "A Global Community",
+    description:
+      "TED connects millions of people around the world through talks, conversations, and ideas that cross boundaries, cultures, and disciplines.",
+  },
+  {
+    icon: MessageSquareText,
+    title: "Ideas That Inspire Action",
+    description:
+      "TED creates a space where powerful ideas can spark conversations, challenge assumptions, and inspire meaningful change.",
+  },
+];
 
 export default function WhatIsTED() {
   return (
-    <Section
-      id="what-is-ted"
-      className="relative py-28 text-white lg:py-36"
-    >
+    <Section id="what-is-ted">
       <Container>
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
+            eyebrow="The Beginning"
+            title="What is TED?"
+            description="TED is a global platform devoted to Ideas Worth Spreading, bringing together people from different fields to share ideas that can inspire, inform, and create meaningful change."
+          />
 
-        <FadeIn>
-          <div className="grid items-center gap-20 lg:grid-cols-2">
-
-            {/* Left */}
-            <div className="flex flex-col items-center text-center">
-
-              <Image
-                src="/about/ted-logo.png"
-                alt="TED Logo"
-                width={260}
-                height={110}
-                className="w-48 lg:w-64"
+          {/* Learn More */}
+          <div className="mt-6 flex justify-center">
+            <a
+              href="https://www.ted.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 text-sm font-medium text-white backdrop-blur-xl transition-all duration-300 hover:border-red-500/40 hover:bg-red-500/10"
+            >
+              Learn more about TED
+              <ArrowUpRight
+                size={16}
+                className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
-
-            <h2 className="mt-6 text-lg font-medium tracking-wide text-gray-300">
-                Ideas Worth Spreading
-              </h2>
-
-              <div className="mt-10 h-px w-24 bg-red-600" />
-
-              <p className="mt-8 text-sm uppercase tracking-[0.4em] text-gray-300">
-                Since 1984
-              </p>
-
-            </div>
-
-            {/* Right */}
-            <div>
-
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-red-500">
-                Global Platform
-              </p>
-
-              <h2 className="mt-5 text-4xl font-black leading-tight lg:text-6xl">
-                What is <span className="text-red-600">TED?</span>
-              </h2>
-
-              <p className="mt-8 text-lg leading-9 text-gray-300">
-                TED is a nonprofit organization devoted to discovering,
-                debating and spreading ideas that spark conversation,
-                deepen understanding and drive meaningful change.
-                Since 1984, TED has brought together the world&lsquo;s leading
-                thinkers, innovators, artists, scientists and changemakers
-                to share powerful short talks that inspire millions of
-                people across the globe.
-              </p>
-
-              <blockquote className="mt-10 border-l-4 border-red-600 pl-6 italic text-gray-200">
-                “Ideas change perspectives. Ideas inspire action.
-                Ideas are worth spreading.”
-              </blockquote>
-
-              <Link
-                href="https://www.ted.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-12 inline-flex rounded-full border border-red-600 px-8 py-4 font-semibold transition hover:bg-red-600"
-              >
-                Visit TED →
-              </Link>
-
-            </div>
-
+            </a>
           </div>
-        </FadeIn>
+        </motion.div>
 
+        {/* Feature Cards */}
+        <div className="mt-10 grid gap-5 sm:mt-12 md:grid-cols-3 md:gap-6">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+
+            return (
+              <motion.article
+                key={feature.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:bg-white/[0.07] sm:p-7"
+              >
+                {/* Icon */}
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/10 text-red-500 transition-transform duration-300 group-hover:scale-105">
+                  <Icon size={24} strokeWidth={2} />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold tracking-tight text-white">
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p className="mt-3 text-sm leading-7 text-gray-400 sm:text-base">
+                  {feature.description}
+                </p>
+
+                {/* Hover Accent */}
+                <div className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-red-500 transition-transform duration-300 group-hover:scale-x-100" />
+              </motion.article>
+            );
+          })}
+        </div>
       </Container>
     </Section>
   );

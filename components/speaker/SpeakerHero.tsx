@@ -5,7 +5,7 @@ import Section from "../ui/Section";
 
 export default function SpeakerHero() {
   return (
-    <Section className="relative flex min-h-screen items-center overflow-hidden text-white">
+    <Section className="py-0 relative flex min-h-screen items-center overflow-hidden text-white">
 
       {/* Ambient Glow */}
       <div className="absolute inset-0 pointer-events-none">

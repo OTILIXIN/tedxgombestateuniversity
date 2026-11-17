@@ -3,7 +3,7 @@ import Section from "../ui/Section";
 
 export default function GetInvolvedHero() {
   return (
-    <Section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6 pb-24 pt-28 text-white sm:px-8 sm:pb-32 lg:px-10 lg:pt-32">
+    <Section className="py-0 relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6 pb-24 pt-28 text-white sm:px-8 sm:pb-32 lg:px-10 lg:pt-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(235,0,40,0.25),_transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600/10 blur-[220px]" />

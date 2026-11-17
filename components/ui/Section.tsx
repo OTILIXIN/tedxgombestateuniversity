@@ -1,16 +1,17 @@
-type SectionProps = {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
-};
+import type { HTMLAttributes } from "react";
+
+type SectionProps = HTMLAttributes<HTMLElement>;
 
 export default function Section({
   children,
   className = "",
-  id,
+  ...props
 }: SectionProps) {
   return (
-    <section id={id} className={`relative isolate overflow-hidden py-20 sm:py-24 ${className}`}>
+    <section
+      className={`py-16 sm:py-20 lg:py-24 ${className}`}
+      {...props}
+    >
       {children}
     </section>
   );

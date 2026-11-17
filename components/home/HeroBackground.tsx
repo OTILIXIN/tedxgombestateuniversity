@@ -1,14 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/hero/1.jpg",
-  "/hero/2.jpg",
-  "/hero/3.jpg",
-  "/hero/4.jpg",
-  "/hero/5.jpg",
-  "/hero/6.jpg",
+  { src: "/hero/1.jpg", mobileFocus: "object-[75%_center]" },
+  { src: "/hero/2.jpg", mobileFocus: "object-center" },
+  { src: "/hero/3.jpg", mobileFocus: "object-center" },
+  { src: "/hero/4.jpg", mobileFocus: "object-center" },
+  { src: "/hero/5.jpg", mobileFocus: "object-center" },
+  { src: "/hero/6.jpg", mobileFocus: "object-center" },
 ];
 
 export default function HeroBackground() {
@@ -28,17 +29,27 @@ export default function HeroBackground() {
       {images.map((image, index) => (
 
         <div
-          key={image}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[2500ms] ${
+          key={image.src}
+          className={`absolute inset-0 transition-opacity duration-[2500ms] ${
             current === index ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `url(${image})`,
             transform: current === index ? "scale(1.08)" : "scale(1)",
             transition:
               "opacity 2.5s ease-in-out, transform 8s ease-out",
           }}
-        />
+        >
+          <Image
+            src={image.src}
+            alt=""
+            fill
+            priority={index === 0}
+            loading={index === 0 ? undefined : "eager"}
+            sizes="100vw"
+            quality={70}
+            className={`object-cover sm:object-center ${image.mobileFocus}`}
+          />
+        </div>
 
       ))}
 

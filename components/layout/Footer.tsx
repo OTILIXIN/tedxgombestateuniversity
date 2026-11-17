@@ -3,8 +3,6 @@ import Link from "next/link";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
 } from "react-icons/fa6";
 
 import Container from "../ui/Container";
@@ -57,7 +55,7 @@ export default function Footer() {
 </li>
               <li>
   <Link
-    href="/"
+    href="/about"
     className="transition-colors duration-300 hover:text-red-500"
   >
     About
@@ -65,7 +63,7 @@ export default function Footer() {
 </li>
               <li>
   <Link
-    href="/"
+    href="/speakers"
     className="transition-colors duration-300 hover:text-red-500"
   >
     Speakers
@@ -73,19 +71,19 @@ export default function Footer() {
 </li>
               <li>
   <Link
-    href="/"
+    href="/get-involved/partner"
     className="transition-colors duration-300 hover:text-red-500"
   >
     Partners
   </Link>
 </li>
               <li>
-  <Link
-    href="/"
+  <a
+    href="mailto:tedxgombestateuniversity0@gmail.com"
     className="transition-colors duration-300 hover:text-red-500"
   >
     Contact
-  </Link>
+  </a>
 </li>
 
             </ul>
@@ -115,8 +113,8 @@ export default function Footer() {
 
             <div className="mt-6 flex gap-4">
 
-  <a
-  href="https://www.instagram.com/yourusername"
+<a
+  href="https://www.instagram.com/tedxgombestateuniversity/"
   target="_blank"
   rel="noopener noreferrer"
   className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
@@ -125,28 +123,8 @@ export default function Footer() {
   <FaInstagram size={18} />
 </a>
 
-  <a
-  href="https://www.linkedin.com/in/yourusername"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
-  aria-label="LinkedIn"
->
-  <FaLinkedinIn size={18} />
-</a>
-
-  <a
-  href="https://www.youtube.com/@yourusername"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
-  aria-label="YouTube"
->
-  <FaYoutube size={18} />
-</a>
-
-  <a
-  href="https://www.facebook.com/yourusername"
+<a
+  href="https://web.facebook.com/profile.php?id=61580382606597"
   target="_blank"
   rel="noopener noreferrer"
   className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all duration-300 hover:border-red-600 hover:bg-red-600 hover:text-white"
@@ -155,7 +133,7 @@ export default function Footer() {
   <FaFacebookF size={18} />
 </a>
 
-</div>
+            </div>
 
           </div>
 
@@ -164,7 +142,7 @@ export default function Footer() {
        {/* Bottom Footer */}
 <div className="border-t border-white/10 py-8">
 
-  <div className="grid gap-8 text-center lg:grid-cols-3 lg:items-center lg:text-left">
+  <div className="grid gap-6 text-center lg:grid-cols-3 lg:items-center lg:text-left">
 
     {/* Left */}
     <p className="text-sm text-gray-300">

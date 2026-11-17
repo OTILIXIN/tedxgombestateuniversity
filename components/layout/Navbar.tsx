@@ -62,7 +62,7 @@ export default function Navbar() {
 
   {/* Desktop Register Button */}
   <Link
-    href="#"
+    href="/get-involved"
     className="hidden md:inline-flex rounded-full border border-red-600 bg-red-600 px-6 py-2.5 text-sm font-semibold transition-all duration-300 hover:bg-red-700"
   >
     Register
@@ -110,7 +110,7 @@ export default function Navbar() {
       ))}
 
       <Link
-        href="#"
+        href="/get-involved"
         className="mt-6 rounded-xl bg-red-600 px-6 py-4 text-center font-semibold"
       >
         Register
