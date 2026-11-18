@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 
 const images = [
   { src: "/speaker/1.jpg", mobileFocus: "object-center" },
-  { src: "/speaker/2.jpg", mobileFocus: "object-center" },
-  { src: "/speaker/3.jpg", mobileFocus: "object-center" },
-  { src: "/speaker/4.jpg", mobileFocus: "object-center" },
-  { src: "/speaker/5.jpg", mobileFocus: "object-center" },
-  { src: "/speaker/6.jpg", mobileFocus: "object-center" },
+  { src: "/speaker/2.JPG", mobileFocus: "object-center" },
+  { src: "/speaker/3.JPG", mobileFocus: "object-center" },
+  { src: "/speaker/4.JPG", mobileFocus: "object-center" },
+  { src: "/speaker/5.JPG", mobileFocus: "object-center" },
+  { src: "/speaker/6.JPG", mobileFocus: "object-center" },
 ];
 
 export default function SpeakerBackground() {
@@ -24,10 +24,8 @@ export default function SpeakerBackground() {
   }, []);
 
   return (
-    <div className="fixed inset-0 -z-20 overflow-hidden">
-
+    <div className="fixed inset-0 z-0 overflow-hidden bg-black">
       {images.map((image, index) => (
-
         <div
           key={image.src}
           className={`absolute inset-0 transition-opacity duration-[2500ms] ${
@@ -50,9 +48,7 @@ export default function SpeakerBackground() {
             className={`object-cover sm:object-center ${image.mobileFocus}`}
           />
         </div>
-
       ))}
-
     </div>
   );
 }

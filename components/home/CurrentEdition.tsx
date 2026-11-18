@@ -31,13 +31,13 @@ export default function CurrentEdition() {
             <InfoCard
               icon={<Palette className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
               title="Theme"
-              value="To Be Announced"
+              value="Beyond The Box"
             />
 
             <InfoCard
               icon={<CalendarDays className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
               title="Date"
-              value="To Be Announced"
+              value="5th June, 2027"
             />
 
             <InfoCard

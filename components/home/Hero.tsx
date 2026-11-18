@@ -28,9 +28,11 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 grid w-full gap-4 sm:mt-12 sm:w-auto sm:grid-flow-col sm:auto-cols-fr sm:justify-center">
-            <Button>Stay Updated</Button>
+            <Button href="#newsletter">Stay Updated</Button>
 
-            <Button variant="secondary">Explore TEDxGSU</Button>
+            <Button href="/about" variant="secondary">
+              Explore TEDxGSU
+            </Button>
           </div>
         </div>
       </section>
