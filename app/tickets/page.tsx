@@ -4,10 +4,14 @@ import { Ticket } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
+import TicketsBackground from "@/components/tickets/TicketsBackground";
 
 export default function TicketsPage() {
   return (
     <main className="relative min-h-screen w-full overflow-x-hidden text-white">
+      <TicketsBackground />
+      <div className="fixed inset-0 -z-10 bg-black/55" />
+
       <Navbar />
 
       <section className="flex min-h-[70vh] items-center pt-24 sm:pt-28">
@@ -26,7 +30,8 @@ export default function TicketsPage() {
             </h1>
 
             <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-gray-300 sm:text-lg">
-              Ticket sales are currently closed. Please check back for updates on the 2027 TEDxGombeStateUniversity edition.
+              Ticket sales are currently closed. Please check back for updates on
+              the 2027 TEDxGombeStateUniversity edition.
             </p>
 
             <Link

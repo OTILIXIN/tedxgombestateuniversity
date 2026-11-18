@@ -28,7 +28,7 @@ export default function About() {
             </p>
 
             <div className="mt-10 flex justify-start">
-              <Button>Learn More</Button>
+              <Button href="/about">Learn More</Button>
             </div>
           </div>
 

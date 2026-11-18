@@ -78,12 +78,12 @@ export default function Footer() {
   </Link>
 </li>
               <li>
-  <a
-    href="mailto:tedxgombestateuniversity0@gmail.com"
+  <Link
+    href="/contact"
     className="transition-colors duration-300 hover:text-red-500"
   >
     Contact
-  </a>
+  </Link>
 </li>
 
             </ul>

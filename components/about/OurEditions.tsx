@@ -15,7 +15,7 @@ const editions = [
     status: "Past Edition",
     description:
       "The inaugural TEDxGombeStateUniversity experience, centered on challenging limitations, embracing new perspectives, and exploring the possibilities that emerge when minds think beyond conventional boundaries.",
-    href: "#",
+    href: "/speakers",
   },
 ];
 
