@@ -14,7 +14,7 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const baseStyle =
-    "px-8 py-4 rounded-xl font-semibold transition duration-300";
+    "block w-full px-8 py-4 text-center rounded-xl font-semibold transition duration-300 sm:w-auto";
 
   const variants = {
     primary:

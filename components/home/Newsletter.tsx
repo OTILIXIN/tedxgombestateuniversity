@@ -9,12 +9,12 @@ export default function Newsletter() {
       </div>
 
       <Container>
-        <div className="relative z-10 mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-md sm:p-8 lg:p-12">
-          <p className="mt-4 text-center text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
+        <div className="relative z-10 mx-auto max-w-4xl rounded-2xl border border-white/10 bg-white/[0.06] p-5 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-md sm:rounded-[2rem] sm:p-8 lg:p-12">
+          <p className="mt-2 text-center text-2xl font-black leading-tight sm:mt-4 sm:text-4xl md:text-5xl">
             Stay Connected
           </p>
 
-          <h2 className="mt-4 text-center text-4xl font-bold">
+          <h2 className="mt-3 text-center text-3xl font-bold sm:mt-4 sm:text-4xl">
             Never Miss an Update
           </h2>
 
@@ -27,7 +27,7 @@ export default function Newsletter() {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 rounded-full border border-white/10 bg-black/40 px-5 py-4 text-white placeholder:text-gray-500 outline-none transition-all duration-300 focus:border-red-600 focus:ring-2 focus:ring-red-600/20"
+              className="min-w-0 flex-1 rounded-full border border-white/10 bg-black/40 px-4 py-4 text-white placeholder:text-gray-500 outline-none transition-all duration-300 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 sm:px-5"
             />
 
             <button className="w-full rounded-full bg-red-600 px-8 py-4 font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:bg-red-700 md:w-auto">

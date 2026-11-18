@@ -1,16 +1,13 @@
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { CSSProperties } from "react";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const fontVariables = {
+  "--font-geist-sans": "Arial, Helvetica, sans-serif",
+  "--font-geist-mono":
+    "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+} as CSSProperties;
 
 export const metadata: Metadata = {
   title: "TEDxGombeStateUniversity | Official Website",
@@ -26,9 +23,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
+      style={fontVariables}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
