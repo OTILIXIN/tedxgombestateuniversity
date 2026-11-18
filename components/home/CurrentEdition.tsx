@@ -48,8 +48,8 @@ export default function CurrentEdition() {
 
             <InfoCard
               icon={<Ticket className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
-              title="Registration"
-              value="Opening Soon"
+              title="Ticket Sales"
+              value="Tickets Closed"
             />
           </div>
         </div>

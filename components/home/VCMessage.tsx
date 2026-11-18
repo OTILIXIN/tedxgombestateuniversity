@@ -13,7 +13,7 @@ export default function VCMessage() {
 
       <Container>
 
-        <div className="relative z-10 grid items-center gap-12 lg:min-h-[760px] lg:grid-cols-2 lg:gap-20">
+        <div className="relative z-10 grid items-center gap-8 sm:gap-10 lg:min-h-[760px] lg:grid-cols-2 lg:gap-20">
 
           {/* LEFT */}
           <div className="order-2 relative z-20 max-w-xl lg:order-1">
@@ -46,14 +46,10 @@ export default function VCMessage() {
 
             </div>
 
-            <button className="mt-10 w-full rounded-xl border border-red-600 px-8 py-4 font-semibold transition-all duration-300 hover:bg-red-600 sm:w-auto">
-              Read Full Message
-            </button>
-
           </div>
 
           {/* RIGHT */}
-          <div className="order-1 relative h-[380px] overflow-hidden rounded-3xl sm:h-[500px] md:h-[620px] lg:order-2 lg:h-[800px] lg:rounded-none">
+          <div className="order-1 relative h-[320px] overflow-hidden rounded-3xl sm:h-[500px] md:h-[620px] lg:order-2 lg:h-[800px] lg:rounded-none">
 
             {/* Left Fade */}
 <div className="absolute inset-y-0 left-0 z-10 w-40 bg-gradient-to-r from-black via-black/80 to-transparent" />

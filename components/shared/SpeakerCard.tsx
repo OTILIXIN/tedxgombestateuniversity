@@ -32,6 +32,7 @@ export default function SpeakerCard({
       <div className="flex flex-1 flex-col p-5">
 
         <h3 className="text-lg font-bold transition-colors duration-300 group-hover:text-red-500">
+          {name}
         </h3>
 
         <p className="mt-2 text-sm leading-6 text-gray-400">
