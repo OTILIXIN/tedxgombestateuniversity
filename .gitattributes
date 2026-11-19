@@ -8,3 +8,4 @@ Add[[:space:]]Corrections[[:space:]]and[[:space:]]New[[:space:]]Files.psd[[:spac
 *.gif filter=lfs diff=lfs merge=lfs -text
 *.svg filter=lfs diff=lfs merge=lfs -text
 public/tickets-background/*.webp -filter -diff -merge -text
+public/speaker-background/*.webp -filter -diff -merge -text
