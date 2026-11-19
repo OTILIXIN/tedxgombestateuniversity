@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 
@@ -35,13 +34,6 @@ export default function JoinTeam() {
             <span className="rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-2 text-sm font-medium text-yellow-400">
               Applications Currently Closed
             </span>
-
-            <Link
-              href="/get-involved"
-              className="rounded-xl border border-red-600 bg-red-600 px-8 py-4 font-semibold transition hover:bg-red-700"
-            >
-              Learn About Getting Involved
-            </Link>
 
           </div>
 

@@ -7,6 +7,7 @@ import { ArrowUpRight, VideoOff, Mic2 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
+import { speakerApplicationsStatus } from "@/data/siteAvailability";
 
 import { speakers } from "./speakers";
 
@@ -161,13 +162,24 @@ export default function SpeakerGrid() {
             Share your perspective and help inspire meaningful conversations.
           </p>
 
-          <Link
-            href="/get-involved/speaker"
-            className="mt-8 inline-flex items-center gap-3 rounded-full bg-red-600 px-8 py-4 text-sm font-semibold text-white transition hover:bg-red-700"
-          >
-            Apply to Become a Speaker
-            <ArrowUpRight size={18} />
-          </Link>
+          {speakerApplicationsStatus === "Open" ? (
+            <Link
+              href="/get-involved/speaker"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-red-600 px-8 py-4 text-sm font-semibold text-white transition hover:bg-red-700"
+            >
+              Apply to Become a Speaker
+              <ArrowUpRight size={18} />
+            </Link>
+          ) : (
+            <span
+              aria-disabled="true"
+              className="mt-8 inline-flex cursor-not-allowed items-center rounded-full border border-white/10 bg-white/5 px-8 py-4 text-sm font-semibold text-gray-400"
+            >
+              {speakerApplicationsStatus === "Closed"
+                ? "Applications Closed"
+                : "Applications Coming Soon"}
+            </span>
+          )}
         </div>
       </Container>
     </Section>

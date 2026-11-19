@@ -7,10 +7,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { navigation } from "@/data/navigation";
+import { ticketSalesStatus } from "@/data/siteAvailability";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const ticketStatusLabel =
+    ticketSalesStatus === "Closed" ? "Tickets Closed" : "Tickets Coming Soon";
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-black/5 backdrop-blur-md">
@@ -60,13 +63,21 @@ export default function Navbar() {
         {/* CTA */}
         <div className="flex items-center gap-4">
 
-  {/* Desktop Register Button */}
-  <Link
-    href="/tickets"
-    className="hidden md:inline-flex rounded-full border border-red-600 bg-red-600 px-6 py-2.5 text-sm font-semibold transition-all duration-300 hover:bg-red-700"
-  >
-    Register
-  </Link>
+  {ticketSalesStatus === "Open" ? (
+    <Link
+      href="/tickets"
+      className="hidden md:inline-flex rounded-full border border-red-600 bg-red-600 px-6 py-2.5 text-sm font-semibold transition-all duration-300 hover:bg-red-700"
+    >
+      Register
+    </Link>
+  ) : (
+    <span
+      aria-disabled="true"
+      className="hidden cursor-not-allowed rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-sm font-semibold text-gray-400 md:inline-flex"
+    >
+      {ticketStatusLabel}
+    </span>
+  )}
 
   {/* Mobile Menu Button */}
   <button
@@ -109,13 +120,22 @@ export default function Navbar() {
         </Link>
       ))}
 
-      <Link
-        href="/tickets"
-        onClick={() => setIsOpen(false)}
-        className="mt-6 rounded-xl bg-red-600 px-6 py-4 text-center font-semibold"
-      >
-        Register
-      </Link>
+      {ticketSalesStatus === "Open" ? (
+        <Link
+          href="/tickets"
+          onClick={() => setIsOpen(false)}
+          className="mt-6 rounded-xl bg-red-600 px-6 py-4 text-center font-semibold"
+        >
+          Register
+        </Link>
+      ) : (
+        <span
+          aria-disabled="true"
+          className="mt-6 cursor-not-allowed rounded-xl border border-white/10 bg-white/5 px-6 py-4 text-center font-semibold text-gray-400"
+        >
+          {ticketStatusLabel}
+        </span>
+      )}
 
     </div>
 

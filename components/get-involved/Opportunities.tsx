@@ -9,6 +9,7 @@ import Container from "../ui/Container";
 import Section from "../ui/Section";
 import SectionHeader from "../ui/SectionHeader";
 import OpportunityCard from "./OpportunityCard";
+import { speakerApplicationsStatus } from "@/data/siteAvailability";
 
 export default function Opportunities() {
   return (
@@ -34,7 +35,7 @@ export default function Opportunities() {
           <OpportunityCard
             title="Become a Speaker"
             description="Share an original idea, inspiring story, or powerful performance with our audience."
-            status="Coming Soon"
+            status={speakerApplicationsStatus}
             href="/get-involved/speaker"
             icon={<Mic2 size={40} />}
           />

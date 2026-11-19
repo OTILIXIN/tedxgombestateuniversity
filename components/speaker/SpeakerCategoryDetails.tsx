@@ -2,6 +2,7 @@
 
 import Container from "../ui/Container";
 import Section from "../ui/Section";
+import type { AvailabilityStatus } from "@/data/siteAvailability";
 
 type Category = {
   id: string;
@@ -9,7 +10,7 @@ type Category = {
   overview: string;
   idealFor: string[];
   duration: string;
-  status: string;
+  status: AvailabilityStatus;
 };
 
 type SpeakerCategoryDetailsProps = {
@@ -152,25 +153,41 @@ export default function SpeakerCategoryDetails({
           <div className="mt-16 rounded-3xl border border-red-600/20 bg-gradient-to-r from-red-600/10 to-transparent p-8 text-center">
 
             <h3 className="text-3xl font-bold">
-              Ready to share your idea?
+              {category.status === "Open"
+                ? "Ready to share your idea?"
+                : category.status === "Closed"
+                  ? "Applications are closed"
+                  : "Applications are coming soon"}
             </h3>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-300">
-              If this category best represents your experience and your idea,
-              continue to the application form and tell us your story.
+              {category.status === "Open"
+                ? "If this category best represents your experience and your idea, continue to the application form and tell us your story."
+                : "Speaker applications are not open yet. Please check back for updates."}
             </p>
 
-            <button
-              onClick={() =>
-                document.getElementById("speaker-application")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                })
-              }
-              className="mt-10 rounded-full bg-red-600 px-8 py-4 text-lg font-semibold transition hover:bg-red-700"
-            >
-              Apply as {category.title}
-            </button>
+            {category.status === "Open" ? (
+              <button
+                onClick={() =>
+                  document.getElementById("speaker-application")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  })
+                }
+                className="mt-10 rounded-full bg-red-600 px-8 py-4 text-lg font-semibold transition hover:bg-red-700"
+              >
+                Apply as {category.title}
+              </button>
+            ) : (
+              <span
+                aria-disabled="true"
+                className="mt-10 inline-flex cursor-not-allowed rounded-full border border-white/10 bg-white/5 px-8 py-4 text-lg font-semibold text-gray-400"
+              >
+                {category.status === "Closed"
+                  ? "Applications Closed"
+                  : "Applications Coming Soon"}
+              </span>
+            )}
 
           </div>
 
