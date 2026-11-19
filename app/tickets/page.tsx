@@ -10,7 +10,6 @@ export default function TicketsPage() {
   return (
     <main className="relative isolate min-h-screen w-full overflow-x-hidden text-white">
       <TicketsBackground />
-      <div className="fixed inset-0 z-10 bg-black/55" />
 
       <div className="relative z-20">
         <Navbar />
@@ -44,9 +43,9 @@ export default function TicketsPage() {
             </div>
           </Container>
         </section>
-      </div>
 
-      <Footer />
+        <Footer />
+      </div>
     </main>
   );
 }

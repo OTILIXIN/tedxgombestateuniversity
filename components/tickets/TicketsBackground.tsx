@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/tickets background/TOUCHBYJB-346.JPG",
-  "/tickets background/TOUCHBYJB-347.JPG",
-  "/tickets background/TOUCHBYJB-347 (1).JPG",
-  "/tickets background/TOUCHBYJB-348.JPG",
-  "/tickets background/TOUCHBYJB-349.JPG",
-  "/tickets background/TOUCHBYJB-352.JPG",
+  "/tickets-background/ticket-346.webp",
+  "/tickets-background/ticket-347.webp",
+  "/tickets-background/ticket-347-1.webp",
+  "/tickets-background/ticket-348.webp",
+  "/tickets-background/ticket-349.webp",
+  "/tickets-background/ticket-352.webp",
 ];
 
 export default function TicketsBackground() {
@@ -43,7 +43,7 @@ export default function TicketsBackground() {
             fill
             priority={index === 0}
             sizes="100vw"
-            quality={75}
+            unoptimized
             className="object-cover"
           />
         </div>
