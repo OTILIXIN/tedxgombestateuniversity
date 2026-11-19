@@ -14,6 +14,7 @@ import SpeakerJourney from "@/components/speaker/SpeakerJourney";
 import SpeakerApplicationForm from "@/components/speaker/SpeakerApplicationForm";
 
 import { speakerCategories } from "@/data/speakerCategories";
+import { speakerApplicationsStatus } from "@/data/siteAvailability";
 
 export default function SpeakerPage() {
   const [selectedCategory, setSelectedCategory] = useState(
@@ -48,9 +49,9 @@ export default function SpeakerPage() {
 
         <SpeakerJourney />
 
-        <SpeakerApplicationForm
-          category={selectedCategory}
-        />
+        {speakerApplicationsStatus === "Open" && (
+          <SpeakerApplicationForm category={selectedCategory} />
+        )}
 
         <Footer />
       </div>

@@ -10,6 +10,7 @@ import Card from "../ui/Card";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 import SectionHeader from "../ui/SectionHeader";
+import { ticketSalesStatus } from "@/data/siteAvailability";
 
 export default function CurrentEdition() {
   return (
@@ -49,7 +50,13 @@ export default function CurrentEdition() {
             <InfoCard
               icon={<Ticket className="h-7 w-7 sm:h-8 sm:w-8 text-red-500" />}
               title="Ticket Sales"
-              value="Tickets Closed"
+              value={
+                ticketSalesStatus === "Open"
+                  ? "Tickets Available"
+                  : ticketSalesStatus === "Closed"
+                    ? "Tickets Closed"
+                    : "Tickets Coming Soon"
+              }
             />
           </div>
         </div>
@@ -70,7 +77,7 @@ function InfoCard({
   value,
 }: InfoCardProps) {
   return (
-    <Card className="h-full rounded-2xl border-white/10 bg-black/25 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-red-600/50">
+    <Card className="h-full rounded-2xl border-white/10 bg-black/25 p-6 text-center">
       <div className="mb-5 flex justify-center">{icon}</div>
 
       <h3 className="text-xs uppercase tracking-[0.3em] text-gray-300 sm:text-sm">

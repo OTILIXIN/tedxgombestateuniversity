@@ -1,3 +1,5 @@
+import { speakerApplicationsStatus } from "./siteAvailability";
+
 export const speakerCategories = [
   {
     id: "student",
@@ -13,7 +15,7 @@ export const speakerCategories = [
 
     duration: "8–12 minutes",
 
-    status: "Open",
+    status: speakerApplicationsStatus,
   },
 
   {
@@ -30,7 +32,7 @@ export const speakerCategories = [
 
     duration: "12–18 minutes",
 
-    status: "Open",
+    status: speakerApplicationsStatus,
   },
 
   {
@@ -48,7 +50,7 @@ export const speakerCategories = [
 
     duration: "3–8 minutes",
 
-    status: "Open",
+    status: speakerApplicationsStatus,
   },
 
   {
@@ -67,7 +69,7 @@ export const speakerCategories = [
 
     duration: "10–15 minutes",
 
-    status: "Open",
+    status: speakerApplicationsStatus,
   },
 
   {
@@ -86,7 +88,7 @@ export const speakerCategories = [
 
     duration: "10–15 minutes",
 
-    status: "Open",
+    status: speakerApplicationsStatus,
   },
 
   {
@@ -105,6 +107,6 @@ export const speakerCategories = [
 
     duration: "8–12 minutes",
 
-    status: "Open",
+    status: speakerApplicationsStatus,
   },
 ];
